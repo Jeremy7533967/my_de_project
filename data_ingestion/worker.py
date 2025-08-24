@@ -20,6 +20,7 @@ from data_ingestion.config import (
 app = Celery(
     main="worker",
     include=[
+        "data_ingestion.tasks",
         "data_ingestion.tasks_crawler_hahow_course",
         "data_ingestion.tasks_crawler_hahow_article",
     ],
